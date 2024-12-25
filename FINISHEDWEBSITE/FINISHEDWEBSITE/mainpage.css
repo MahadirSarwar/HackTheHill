@@ -1,0 +1,187 @@
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #f4f4f4; /* Light background for better contrast */
+    background-image: url(BETTERSELF2.jpg); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
+    background-attachment: fixed; /* Make it fixed while scrolling */
+    z-index: 1; /* Ensure body is the base layer */
+}
+
+.welcome-text {
+    text-align: left; /* Align the text to the left */
+    margin-top: 80px; /* Space above the welcome text */
+    margin-left: 20px; /* Space from the left edge */
+    z-index: 1; /* Ensure it doesn't interfere with dropdowns */
+    position: relative; /* For better layering */
+}
+
+.welcome-text b {
+    font-size: 2em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    color: #e2e0e0; /* Darker color for contrast */
+}
+
+.description-container {
+    position: relative;
+    padding: 0 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    z-index: 1; /* Ensure it's below dropdown elements */
+}
+
+.description-text {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%); /* Center align horizontally */
+    color: #e2e0e0; /* Adjust contrast for visibility */
+    font-size: 1.2em;
+    z-index: 2; /* Ensure it's below dropdown elements */
+    width: 80%; /* Optional: Set width for better formatting */
+    max-width: 900px; /* Ensure text doesn't stretch too far */
+    text-align: justify; /* Optional: Justify the text */
+}
+
+.image-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    z-index: 1; /* Ensure it stays below dropdowns */
+}
+
+.adjustable-image {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: auto;
+    z-index: 1; /* Ensure it does not overlap dropdowns */
+}
+
+/* Header Wrapper Styles */
+.header-wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    z-index: 3; /* Ensure header-wrapper doesn't interfere with dropdown */
+}
+
+/* Container to hold columns */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    margin-top: 0;
+    z-index: 3; /* Ensure container doesn't interfere with dropdown */
+}
+
+/* Column Styles */
+.column {
+    width: 16%;
+    position: relative;
+    z-index: 3; /* Ensure dropdown sits above */
+}
+
+/* Button Styles */
+.button {
+    background-color: #ee9f4b;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 4; /* Button above other elements */
+    text-align: center;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.button:hover {
+    background-color: #ff7700;
+    transform: scale(1.02);
+}
+
+/* Text (Dropdown) Styles */
+.text {
+    display: block;
+    opacity: 0;
+    margin-top: 10px;
+    text-align: left;
+    transition: opacity 0.3s ease;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    max-width: 80%;
+    min-width: 150px;
+    z-index: 3000; /* Ensure dropdown stays above other elements */
+}
+
+/* Show dropdown on hover */
+.column:hover .text {
+    opacity: 1;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3000; /* Ensures the menu appears on top of all elements */
+    display: none;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.visible {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #333;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 3000;
+}
+
+.dropdown-item:hover {
+    background-color: #000000;
+}
+
+.dropdown-description {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    position: absolute;
+    z-index: 4000; /* Higher than other elements */
+}
+
+.dropdown-item:hover .dropdown-description {
+    display: block;
+}
