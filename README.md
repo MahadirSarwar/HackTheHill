@@ -26,7 +26,7 @@
 
 - Lists of recommended products and routines.
 
-- Responsive Design: Optimized for desktop and mobile viewing.
+- Responsive Design
 
 - Custom Styling: Clean and modern UI powered by CSS and Google Fonts.
 
